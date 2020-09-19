@@ -64,7 +64,7 @@ data("penguins", package = "palmerpenguins")
 * The *mean* of the flipper length of penguins dataset is *`r mean(penguins)`*. 
 
 
-This code chunk below generates a scatterplot.
+This code chunk below generates a scatterplot and save it.
 
 ```{r flipper_length and bill_length plot}
 ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
