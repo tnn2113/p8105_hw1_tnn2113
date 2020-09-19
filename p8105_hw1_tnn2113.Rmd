@@ -47,3 +47,21 @@ as.numeric(pull(prob1_df, samp_gt_0)) * pull(prob1_df, samp_gt_0)
 as.numeric(pull(prob1_df, samp_gt_0)) * pull(prob1_df, samp)
 ```
 
+
+## Problem 2
+
+Load the *penguins* dataset
+
+```{r}
+data("penguins", package = "palmerpenguins")
+```
+
+
+* Penguins dataset contains a collection of variables in the columns and characteristics of each variable (species, island, body mass, sex, length, depth)
+
+* The penguins data frame has `r nrow(penguins)` rows and `r ncol(penguins)` columns. 
+
+* The mean of the flipper length of penguins dataset is `r mean(penguins)`. 
+
+
+
