@@ -7,7 +7,7 @@ output: github_document
 This is my solution to HW1.
 
 
-```{r}
+```{r, message = FALSE}
 library(tidyverse)
 ```
 
@@ -59,9 +59,23 @@ data("penguins", package = "palmerpenguins")
 
 * Penguins dataset contains a collection of variables in the columns and characteristics of each variable (species, island, body mass, sex, length, depth)
 
-* The penguins data frame has `r nrow(penguins)` rows and `r ncol(penguins)` columns. 
+* The penguins data frame has *`r nrow(penguins)`* *rows* and *`r ncol(penguins)`* *columns*. 
 
-* The mean of the flipper length of penguins dataset is `r mean(penguins)`. 
+* The *mean* of the flipper length of penguins dataset is *`r mean(penguins)`*. 
+
+
+This code chunk below generates a scatterplot.
+
+```{r flipper_length and bill_length plot}
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
+
+ggsave("scatter_plot_penguins.pdf", height = 5, width = 5)
+```
+The plot shows different of values of *flipper length* and *bill length* of Adelie, Chinstrap, and Gentoo species. 
+
+
+
+
 
 
 
